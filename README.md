@@ -9,7 +9,7 @@ This week we will continue working [**Geopandas**](http://geopandas.org/) and le
  1. [Geocoding](Lesson/Lesson3-geocoding.rst) 
    - [Overview of geocoders](Lesson/Lesson3-geocoding.rst#overview-of-geocoders)
    - [Geocoding in Geopandas](Lesson/Lesson3-geocoding.rst#geocoding-in-geopandas) 
- 2. [Table join](Lesson3-table-join.rst)
+ 2. [Table join](Lesson/Lesson3-table-join.rst)
  3. [Projections: Converting from a projection to another](Lesson/Lesson3-projections.rst)
  4. [Spatial queries: Point in Polygon & Intersect](Lesson/Lesson3-point-in-polygon.rst)
  5. [Spatial join](Lesson/Lesson3-spatial-join.rst)
