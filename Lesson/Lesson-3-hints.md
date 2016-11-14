@@ -25,3 +25,40 @@ join = join.drop('id_r', axis=1)
 # Rename a column 'id_l' as 'id'
 join = join.rename(columns={'id_l': 'id'}
 ```
+
+## Problem 2:
+
+### Calculating the buffer
+
+Instead of iterating over the rows in your GeoDataFrame there is also another way ('a shortcut') of calculating e.g. the area of Polygons, take following example:
+
+```python
+
+# Calculate the areas of polygons into a column called 'poly_area'
+data['poly_area'] = data.area
+```
+
+What Geopandas does in the background is basically the same thing, i.e. it iterates over the rows and calculates the area for each row (in this case). You can use similar approach 
+for doing the same thing with `buffer` function. 
+
+### Specifying the column that is used as a source for geometries in GeoDataFrame
+
+When having multiple geometries in a same GeoDataFrame (such as Points and Polygons), it is **necessary to drop either one of them when saving the GeoDataFrame into a Shapefile**. 
+In other words, it means that you can only have a single column having Shapely geometries when saving the GeoDataFrame into a Shapefile. 
+
+You can specify which column should be used as a source for geometries by using a function `.set_geometry()`. Let's continue the previous hint and set the `poly_area` column as our geometry source-column:
+
+ ```python
+ # Define the source for geometries in a GeoDataFrame
+ data = data.set_geometry('poly_area')
+ 
+ # Let's see what is the current active geometry column
+ print(data.geometry.name)
+ ```
+ 
+If we would like to save our GeoDataFrame, we still need to drop the original `geometry` column as a Shapefile cannot contain two geometry columns with Shapely objects:
+  
+ ```python
+ # Drop a column ´geometry
+ data = data.drop('geometry', axis=1)
+ ```
