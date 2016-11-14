@@ -46,7 +46,7 @@ for doing the same thing with `buffer` function.
 When having multiple geometries in a same GeoDataFrame (such as Points and Polygons), it is **necessary to drop either one of them when saving the GeoDataFrame into a Shapefile**. 
 In other words, it means that you can only have a single column having Shapely geometries when saving the GeoDataFrame into a Shapefile. 
 
-You can specify which column should be used as a source for geometries by using a function `.set_geometry()`. Let's continue the previous hint and set the `poly_area` column as our geometry source-column:
+You can specify which column should be used as a source for geometries by using a function `.set_geometry()`. Let's continue the previous example and set the `poly_area` column as our geometry source-column:
 
  ```python
  # Define the source for geometries in a GeoDataFrame
