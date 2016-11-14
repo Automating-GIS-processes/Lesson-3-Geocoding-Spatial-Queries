@@ -1,6 +1,4 @@
-# Lesson 3:-Geocoding & Spatial queries
-
-# Lesson 2: Working with Geo-DataFrames in Pandas and Geopandas
+# Lesson 3: Geocoding & Spatial queries
 
 **NEW!**: You can optionally (**recommended**) read these materials from a new website. Go to [https://automating-gis-processes.github.io/2016/](https://automating-gis-processes.github.io/2016/).
 
