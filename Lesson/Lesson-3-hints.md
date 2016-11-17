@@ -70,5 +70,5 @@ If we would like to save our GeoDataFrame, we still need to drop the original `g
 - Think about the type of spatial join you want to execute. See available options in: [Geopandas documentation] (http://geopandas.org/mergingdata.html#spatial-joins)
 
 ### Grouping data
-Use the `.groupby()` function, which groups each set of data into separate `GeoDataFrames` stored in a `DataFrameGroupBy` object. More information can be found under Lesson 2 Pro tips:
+Use the `.groupby()` function, which groups each set of data into separate `GeoDataFrames` stores them in a `DataFrameGroupBy` object. More information can be found under Lesson 2 Pro tips:
 [Grouping data] (https://automating-gis-processes.github.io/2016/Lesson2-geopandas-basics.html#grouping-data)
