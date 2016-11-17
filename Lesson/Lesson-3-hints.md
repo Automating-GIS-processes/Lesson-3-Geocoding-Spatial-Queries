@@ -62,3 +62,9 @@ If we would like to save our GeoDataFrame, we still need to drop the original `g
  # Drop a column ´geometry
  data = data.drop('geometry', axis=1)
  ```
+ 
+## Problem 3
+ 
+### Grouping data
+Use the .groupby() function for grouping data. More information can be found under Lesson 2 Pro tips:
+[Grouping data] (https://automating-gis-processes.github.io/2016/Lesson2-geopandas-basics.html#grouping-data)
