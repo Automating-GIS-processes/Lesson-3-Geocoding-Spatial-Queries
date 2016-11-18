@@ -45,7 +45,7 @@ for doing the same thing with `buffer` function.
 
 When having multiple geometries in a same GeoDataFrame (such as Points and Polygons), it is **necessary to drop either one of them when saving the GeoDataFrame into a Shapefile**. In other words, it means that you can only have a single column having Shapely geometries when saving the GeoDataFrame into a Shapefile. 
 
-First, replace the values in the `geometry`column with the buffer polygos, and after that remove the duplicate column:
+First, replace the values in the `geometry`column with the buffer polygos, and after that remove the duplicate column from your GeoDataFrame:
 
  ```python
  # Drop a column ´geometry
