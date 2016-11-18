@@ -43,26 +43,16 @@ for doing the same thing with `buffer` function.
 
 ### Specifying the column that is used as a source for geometries in GeoDataFrame
 
-When having multiple geometries in a same GeoDataFrame (such as Points and Polygons), it is **necessary to drop either one of them when saving the GeoDataFrame into a Shapefile**. 
-In other words, it means that you can only have a single column having Shapely geometries when saving the GeoDataFrame into a Shapefile. 
+When having multiple geometries in a same GeoDataFrame (such as Points and Polygons), it is **necessary to drop either one of them when saving the GeoDataFrame into a Shapefile**. In other words, it means that you can only have a single column having Shapely geometries when saving the GeoDataFrame into a Shapefile. 
 
-You can specify which column should be used as a source for geometries by using a function `.set_geometry()`. Let's continue the previous example and set the `poly_area` column as our geometry source-column:
+First, replace the values in the `geometry`column with the buffer polygos, and after that remove the duplicate column:
 
- ```python
- # Define the source for geometries in a GeoDataFrame
- data = data.set_geometry('poly_area')
- 
- # Let's see what is the current active geometry column
- print(data.geometry.name)
- ```
- 
-If we would like to save our GeoDataFrame, we still need to drop the original `geometry` column as a Shapefile cannot contain two geometry columns with Shapely objects:
-  
  ```python
  # Drop a column ´geometry
- data = data.drop('geometry', axis=1)
+ data = data.drop('poly_area', axis=1)
  ```
  
+
 ## Problem 3
  
 ### Spatial join
