@@ -48,7 +48,7 @@ When having multiple geometries in a same GeoDataFrame (such as Points and Polyg
 First, replace the values in the `geometry`column with the buffer polygos, and after that remove the duplicate column from your GeoDataFrame:
 
  ```python
- # Drop a column ´geometry
+ # Drop the extra column with shapely objects before saving the GeoDataFrame to shapefile
  data = data.drop('poly_area', axis=1)
  ```
  
